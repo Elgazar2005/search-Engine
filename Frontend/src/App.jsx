@@ -1,12 +1,14 @@
-import React from 'react'
-import { Button } from "@material-tailwind/react";
+import { BrowserRouter, Routes, Route } from "react-router";
+import Home from "./pages/Home";
 
-const App = () => {
+function App() {
   return (
-    <div>App
-      <Button>Button</Button>
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
